@@ -14,11 +14,11 @@ namespace NevekSzurese
             nevek.Add("Kiss István");
             nevek.Add("Nagy elemér");
             nevek.Add("kissándorjózsef23");
-            nevek.Add("Tóth# Ilona");
+            nevek.Add("   Tóth# Ilona");
             nevek.Add("Fodor Levente");
             while (true) {
                 Console.Clear();
-                Console.WriteLine("Kilépés");
+                Console.WriteLine("0 Kilépés");
                 Console.WriteLine("1 Névelji szóközök levágva");
                 Console.WriteLine("2 Csak nagybetűvel kezdődők");
                 Console.WriteLine("3 Csak számjegy nélküliek");
@@ -33,7 +33,11 @@ namespace NevekSzurese
                 }
                 else if (valaszt == "1")
                 {
-
+                    Console.Clear();
+                    foreach (string nev in nevek)
+                    { 
+                        Console.WriteLine(nev.TrimStart());
+                    }
                 }
                 else if (valaszt == "2")
                 {

@@ -100,7 +100,14 @@ namespace NevekSzurese
                 }
                 else if (valaszt == "5")
                 {
-
+                    Console.Clear();
+                    foreach (var nev in nevek)
+                    {
+                        if (nev.Contains(' '))
+                        {
+                            Console.WriteLine(nev);
+                        }
+                    }
                 }
                 else if (valaszt == "6")
                 {

@@ -68,7 +68,7 @@ namespace NevekSzurese
                         bool jo = true;
                         foreach (var karakter in nev)
                         {
-                            if (char.IsDigit(karakter))
+                            if (char.IsNumber(karakter))
                             {
                                 jo = false;
                             }
@@ -81,7 +81,22 @@ namespace NevekSzurese
                 }
                 else if (valaszt == "4")
                 {
-
+                    Console.Clear();
+                    foreach (var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach (char karakter in nev)
+                        {
+                            if (!(char.IsLetterOrDigit(karakter) || karakter == ' '))
+                            {
+                                jo = false;
+                            }
+                        }
+                        if (jo)
+                        {
+                            Console.WriteLine(nev);
+                        }
+                    }
                 }
                 else if (valaszt == "5")
                 {
